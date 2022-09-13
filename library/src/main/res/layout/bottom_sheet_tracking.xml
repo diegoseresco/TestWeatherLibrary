@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp">
+
+    <View
+        android:layout_width="38dp"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_sheet_decoration"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Switch
+            android:id="@+id/swTrackingState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:thumbTint="@color/main"
+            android:trackTint="@color/main"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <TextView
+            android:id="@+id/tvTrackingState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tracking manual"
+            android:layout_toRightOf="@id/swTrackingState"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvClean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpiar"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llTimeButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b5Secs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="5s"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_round_button_border"
+            android:layout_marginEnd="16dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b10Secs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="10s"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_round_button"
+            android:layout_marginEnd="16dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b30Secs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="30s"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_round_button"
+            android:layout_marginEnd="16dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b60Secs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="60s"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_round_button"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvActionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar coordenadas"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="18dp"/>
+
+    <ImageButton
+        android:id="@+id/ibAction"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_precision"
+        android:background="@drawable/bg_round_border"
+        android:backgroundTint="@color/main"
+        android:layout_gravity="center"
+        android:layout_marginBottom="22dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/bg_round_border"
+        android:backgroundTint="@color/main"
+        android:layout_marginBottom="22dp" >
+        <TextView
+            android:id="@+id/tvLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Latitude: -"
+            android:layout_marginBottom="3dp"/>
+        <TextView
+            android:id="@+id/tvLng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Longitude: -"
+            android:layout_marginBottom="3dp"/>
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0 Puntos obtenidos"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bAccept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aceptar"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_round_border"
+        app:backgroundTint="@color/main"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
